@@ -15,7 +15,7 @@
       </button>
       <ul class="dropdown-menu">
         <li><a routerLink="/courses/{{course.id}}/edit">Edit Course</a></li>
-        <li><a href="#">Delete Course</a></li>
+        <li><a (click)="deleteCourse()">Delete Course</a></li>
       </ul>
     </div>
   </div>

@@ -72,7 +72,14 @@ export class CoursesService {
     }
   }
 
-  deleteCourse(index: number) {
+  deleteCourse(myId: number) {
+	  let index = 0;
+	  for (let c of this.courses) {
+		  if (c.id === myId) {
+			  break;
+		  }
+		  index += 1;
+	  }
     this.courses.splice(index,1);
     this.coursesChanged.next(this.courses.slice());
   }

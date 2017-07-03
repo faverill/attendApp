@@ -25,4 +25,9 @@ export class CourseDetailComponent implements OnInit {
     );
   }
 
+  deleteCourse() {
+	  this.coursesService.deleteCourse(this.id);
+	  this.router.navigate(['courses']);
+  }
+
 }
